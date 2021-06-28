@@ -1,0 +1,27 @@
+<p>Register Component</p>
+<button (click)="toggleTextBox()">Enable Textbox</button>
+<br />
+<br />
+<input
+  #box
+  (keyup)="myEvent(box.value)"
+  (blur)="myEvent('Blurred')"
+  placeholder="Type Something"
+  [disabled]="disabled"
+/>
+<br />
+<br />
+<button (click)="registerUser()">Register User</button>
+<h1>{{ heading }}</h1>
+
+<!-- If else condition in Angular -->
+
+<h1 *ngIf="1; then thenBlock; else elseBlock">If block working</h1>
+
+<ng-template #thenBlock>
+  <h1>If Block Working</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h1>Else Block Working</h1>
+</ng-template>
